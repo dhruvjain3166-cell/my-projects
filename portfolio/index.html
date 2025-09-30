@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Jain's Portfolio</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafb;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0073e6;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #0073e6;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #0161ac;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.17);
+            margin-bottom: 16px;
+        }
+
+        section {
+            padding: 44px 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #0066cc;
+        }
+
+        .project-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f0f4f8;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-img {
+            width: 220px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+        }
+        
+        #contact-section {
+            background: #fff;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #202124;
+            position: relative;
+        }
+
+        #contact-section h2 {
+            color: #1a73e8; 
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-form label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #3c4043;
+            margin-bottom: 4px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            font-size: 14px;
+            padding: 8px 12px;
+            border: 1.3px solid #dadce0;
+            border-radius: 6px;
+            color: #202124;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+            transition: border-color 0.3s ease;
+            resize: vertical;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 6px rgba(26, 115, 232, 0.25);
+        }
+
+        .contact-form textarea {
+            min-height: 80px;
+        }
+
+        .contact-form button {
+            background: linear-gradient(90deg, #1a73e8, #174ea6);
+            color: white;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(26, 115, 232, 0.4);
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #174ea6, #1a73e8);
+            box-shadow: 0 4px 10px rgba(26, 115, 232, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 20px 5px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .project-img {
+                width: 90vw;
+                height: 32vw;
+            }
+        }
+        
+    </style> 
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="Html for contact and resume section\contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <section id="home">
+        <div class="profile-container">
+            <img src="images\profile.jpg" alt="Profile Photo" class="profile-pic"> 
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hello! I'm **Dhruv Jain**, A beginner passionate about learning and creating.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Learn more about my skills, experience, and passion for web development</p>
+        <p>
+            <h3>"Driven by curiosity and exploring, I love to think what will happen if I do that or what will happen.
+            <br>I constantly explore new software and things to improve.</h3>
+            <br>
+            <h3>"I am currently pursuing my certification and learning web development.
+            <br>This is my first portfolio project.</h3>
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <img src="images\campus.png" alt="Project 1 Image" class="project-img">
+            <h3>Project 1 Hackathon</h3>
+            <p>Our team created simple system mangament app for attendance and maintance of ecosystem of campus </p>
+        </div>
+        <div class="project-card">
+            <img src="images\resume.png" alt="Project 2 Image" class="project-img">
+            <h3>Project 2 Resume</h3>
+            <p>Creating a resume .</p>
+            <a href="Html for contact and resume section\resume.html" alt="resume">Click here to view resume </a>
+        </div>
+    </section>
+
+</body>
+</html>
